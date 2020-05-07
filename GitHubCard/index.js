@@ -65,17 +65,18 @@ function cardCreator(userData) {
   userLocation.textContent = `Location: ${userData.data.location}`;
   userLink.href = userData.data.html_url;
   userLink.textContent = userData.data.html_url;
-  userProfile.innerHTML = `Profile: <br>${userLink}`;
+  userProfile.innerHTML = `Profile: <br>`;
   userFollowers.textContent = `Followers: ${userData.data.followers}`;
   userFollowing.textContent = `Following: ${userData.data.following}`;
   userBio.textContent = `Bio: ${userData.data.bio}`;
   
-  // Fill userCard div
+  // Fill userCard div and userInfo div
   userCard.appendChild(userImage);
   userCard.appendChild(userInfo);
   userInfo.appendChild(name);
   userInfo.appendChild(userName);
   userInfo.appendChild(userLocation);
+  userProfile.appendChild(userLink);
   userInfo.appendChild(userProfile);
   userInfo.appendChild(userFollowers);
   userInfo.appendChild(userFollowing);
